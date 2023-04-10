@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./CalculatorResult.css";
 import Gif from "./Gif";
 import loveSmall from "../pictures/loveSmall.svg";
+import Nav from "./Nav";
 
 const CalculatorResult = ({ calculateResult }) => {
   const { names } = useParams();
@@ -13,7 +14,8 @@ const CalculatorResult = ({ calculateResult }) => {
   };
 
   return (
-    <div className="outsiderResultContainer">
+    <>
+      <Nav />
       {calculateResult ? (
         <div className="resultContainer">
           <div className="gifContainer">
@@ -42,7 +44,7 @@ const CalculatorResult = ({ calculateResult }) => {
       ) : (
         <p className="loadingText">Loading...</p>
       )}
-    </div>
+    </>
   );
 };
 
