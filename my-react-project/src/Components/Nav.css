@@ -22,3 +22,8 @@
 .loveLogoImage {
   width: 150px;
 }
+.active {
+  color: rgb(239, 109, 166);
+  text-decoration: none;
+  font-weight: 500;
+}

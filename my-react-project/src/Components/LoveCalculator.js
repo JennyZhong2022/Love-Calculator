@@ -48,7 +48,7 @@ const LoveCalculator = ({ setCalculateResult }) => {
           setCalculateResult(data);
         })
         .then(() => {
-          navigate(`/result/${yourName}&${crushName}`);
+          navigate(`/love-calculate-result/${yourName}&${crushName}`);
         })
         .catch((err) => console.error(err));
     }

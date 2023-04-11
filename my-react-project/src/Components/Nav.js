@@ -1,17 +1,28 @@
 import "./Nav.css";
 import loveLogo from "../pictures/loveLogo.png";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const Nav = () => {
+  const navigate = useNavigate();
+
+  const goHomePage = () => {
+    navigate("/");
+  };
+
   return (
     <header className="header">
       <div className="navContainer">
-        <div className="title">
+        <div onClick={goHomePage} className="title">
           <img className="loveLogoImage" src={loveLogo} alt="Love Calculator" />
         </div>
         <div className="menu">
           <nav>
-            <span>Horoscope Match</span>
-            <span>About the Love Calculator</span>
+            <NavLink to="/horoscope-match">
+              <span className="menuText">Horoscope Match</span>
+            </NavLink>
+            <NavLink to="/about-love-calculator">
+              <span className="menuText">About Love Calculator</span>
+            </NavLink>
           </nav>
         </div>
       </div>
