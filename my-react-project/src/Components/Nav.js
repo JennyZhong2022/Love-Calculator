@@ -1,6 +1,7 @@
 import "./Nav.css";
 import loveLogo from "../pictures/loveLogo.png";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Link from "@mui/material/Link";
 
 const Nav = () => {
   const navigate = useNavigate();
@@ -17,12 +18,26 @@ const Nav = () => {
         </div>
         <div className="menu">
           <nav>
-            <NavLink to="/horoscope-match">
+            <Link
+              href="/horoscope-match"
+              underline="hover"
+              color="rgb(239, 109, 166)"
+            >
+              {"Horoscope Match"}
+            </Link>
+            {/* <NavLink to="/horoscope-match">
               <span className="menuText">Horoscope Match</span>
-            </NavLink>
-            <NavLink to="/about-love-calculator">
+            </NavLink> */}
+            <Link
+              href="/about-love-calculator"
+              underline="hover"
+              color="rgb(239, 109, 166)"
+            >
+              {"About Love Calculator"}
+            </Link>
+            {/* <NavLink to="/about-love-calculator">
               <span className="menuText">About Love Calculator</span>
-            </NavLink>
+            </NavLink> */}
           </nav>
         </div>
       </div>

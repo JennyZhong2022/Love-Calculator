@@ -16,7 +16,7 @@ const Gif = ({ loveScore }) => {
     } else if (loveScore > 50 && loveScore <= 60) {
       setTranslateGif("slight happy");
     } else if (loveScore > 60 && loveScore <= 70) {
-      setTranslateGif("happy");
+      setTranslateGif("medium happy");
     } else if (loveScore > 70 && loveScore <= 80) {
       setTranslateGif("excited");
     } else if (loveScore > 80 && loveScore <= 90) {
