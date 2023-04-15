@@ -93,10 +93,11 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
             understand the results.
           </p>
           <p className="pH">
-            <span>Note: </span> The Horoscope Match Calculator is based on
-            astrology and horoscopes, and the results are not guaranteed to be
-            accurate. It is important to remember that astrology is not a
-            substitute for professional advice and counseling.
+            <span className="note">Note: </span> The Horoscope Match Calculator
+            is based on astrology and horoscopes, and the results are not
+            guaranteed to be accurate. It is important to remember that
+            astrology is not a substitute for professional advice and
+            counseling.
           </p>
         </div>
 
@@ -104,7 +105,7 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
           <form onSubmit={MatchHandler}>
             <div className="inputContainerH">
               <div className="input1H">
-                <h4>Person 1 </h4>
+                <h4>Person 1 Birth</h4>
                 <HoroscopeMatchP1
                   year1={year1}
                   setYear1={setYear1}
@@ -119,7 +120,7 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
               </div>
 
               <div className="input2H">
-                <h4>Person 2 </h4>
+                <h4>Person 2 Birth </h4>
                 <HoroscopeMatchP2
                   year2={year2}
                   setYear2={setYear2}
@@ -138,8 +139,8 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
                 variant="contained"
                 size="large"
                 type="submit"
-                className="btn"
                 color="warning"
+                sx={{ background: "rgb(240,128,128)" }}
               >
                 CALCULATE HOROSCOPE MATCH COMPATIBILITY
               </Button>

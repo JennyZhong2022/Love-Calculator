@@ -3,6 +3,7 @@ import "./CalculatorResult.css";
 import Gif from "./Gif";
 import loveSmall from "../../pictures/loveSmall.svg";
 import Nav from "../NavAndAbout/Nav";
+import Button from "@mui/material/Button";
 
 const CalculatorResult = ({ calculateResult }) => {
   const { names } = useParams();
@@ -36,9 +37,16 @@ const CalculatorResult = ({ calculateResult }) => {
           </div>
           <p className="resultMessage">Message: {calculateResult.result}</p>
           <div className="btnContainer">
-            <button className="btnResult" onClick={goBackToCalculator}>
+            <Button
+              variant="contained"
+              size="large"
+              type="submit"
+              onClick={goBackToCalculator}
+              color="warning"
+              sx={{ background: "rgb(240,128,128)" }}
+            >
               Make another calculation
-            </button>
+            </Button>
           </div>
         </div>
       ) : (

@@ -59,7 +59,7 @@ const HoroscopeMatchP2 = (props) => {
   return (
     <>
       {/*----- year input -----*/}
-      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
+      <FormControl sx={{ minWidth: 315, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Year</InputLabel>
         <Select
           labelId="demo-simple-select-label"

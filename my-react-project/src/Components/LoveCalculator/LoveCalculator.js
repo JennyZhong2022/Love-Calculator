@@ -104,6 +104,7 @@ const LoveCalculator = ({ setCalculateResult }) => {
             type="submit"
             className="btn"
             color="warning"
+            sx={{ background: "rgb(240,128,128)" }}
           >
             Calculate Love
           </Button>
