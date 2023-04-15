@@ -1,7 +1,7 @@
-import LoveCalculatorContent from "./Components/LoveCalculatorContent";
-import CalculatorResult from "./Components/CalculatorResult";
+import LoveCalculatorContent from "./Components/LoveCalculator/LoveCalculatorContent";
+import CalculatorResult from "./Components/LoveCalculator/CalculatorResult";
 import ErrorPage from "./Components/ErrorPage";
-import About from "./Components/About";
+import About from "./Components/NavAndAbout/About";
 import HoroscopeMatch from "./Components/HoroscopeMatch/HoroscopeMatch";
 import HoroscopeMatchResult from "./Components/HoroscopeMatch/HoroscopeMatchResult";
 import "./App.css";

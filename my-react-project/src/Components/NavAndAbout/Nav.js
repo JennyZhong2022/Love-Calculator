@@ -1,5 +1,5 @@
 import "./Nav.css";
-import loveLogo from "../pictures/loveLogo.png";
+import loveLogo from "../../pictures/loveLogo.png";
 import { useNavigate } from "react-router-dom";
 import Link from "@mui/material/Link";
 

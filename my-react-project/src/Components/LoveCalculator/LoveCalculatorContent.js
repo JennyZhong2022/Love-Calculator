@@ -1,7 +1,7 @@
 import "./LoveCalculatorContent.css";
 import LoveCalculator from "./LoveCalculator";
-import Nav from "./Nav";
-import loveImage from "../pictures/love2.jpeg";
+import Nav from "../NavAndAbout/Nav";
+import loveImage from "../../pictures/love2.jpeg";
 
 const LoveCalculatorContent = ({
   setCalculateResult,

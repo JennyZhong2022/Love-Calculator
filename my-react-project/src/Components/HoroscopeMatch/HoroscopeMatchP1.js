@@ -1,4 +1,4 @@
-// import { useState } from "react";
+import "./HoroscopeMatchP1.css";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
@@ -57,7 +57,8 @@ const HoroscopeMatchP1 = (props) => {
   return (
     <>
       {/*----- year input -----*/}
-      <FormControl sx={{ minWidth: 150 }}>
+
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Year</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -73,9 +74,11 @@ const HoroscopeMatchP1 = (props) => {
           ))}
         </Select>
       </FormControl>
-      {/*----- month input -----*/}
+      {/* </div> */}
 
-      <FormControl sx={{ minWidth: 150 }}>
+      {/*----- month input -----*/}
+      {/* <div className="singleInputBox"> */}
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Month</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -93,7 +96,8 @@ const HoroscopeMatchP1 = (props) => {
       </FormControl>
 
       {/*----- day input -----*/}
-      <FormControl sx={{ minWidth: 150 }}>
+
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Day</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -111,7 +115,8 @@ const HoroscopeMatchP1 = (props) => {
       </FormControl>
 
       {/*----- hour input -----*/}
-      <FormControl sx={{ minWidth: 150 }}>
+
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Hour</InputLabel>
         <Select
           labelId="demo-simple-select-label"

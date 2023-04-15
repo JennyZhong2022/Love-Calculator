@@ -59,7 +59,7 @@ const HoroscopeMatchP2 = (props) => {
   return (
     <>
       {/*----- year input -----*/}
-      <FormControl sx={{ minWidth: 150 }}>
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Year</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -77,7 +77,7 @@ const HoroscopeMatchP2 = (props) => {
       </FormControl>
       {/*----- month input -----*/}
 
-      <FormControl sx={{ minWidth: 150 }}>
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Month</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -95,7 +95,7 @@ const HoroscopeMatchP2 = (props) => {
       </FormControl>
 
       {/*----- day input -----*/}
-      <FormControl sx={{ minWidth: 150 }}>
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Day</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -113,7 +113,7 @@ const HoroscopeMatchP2 = (props) => {
       </FormControl>
 
       {/*----- hour input -----*/}
-      <FormControl sx={{ minWidth: 150 }}>
+      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
         <InputLabel id="demo-simple-select-label">Hour</InputLabel>
         <Select
           labelId="demo-simple-select-label"

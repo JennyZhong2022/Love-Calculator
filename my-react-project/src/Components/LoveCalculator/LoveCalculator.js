@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./LoveCalculator.css";
 import Button from "@mui/material/Button";
-import exclamation from "../pictures/exclamation-mark2.png";
+import exclamation from "../../pictures/exclamation-mark2.png";
 import TextField from "@mui/material/TextField";
 
 const APIKey = process.env.REACT_APP_LOVE_API_KEY;

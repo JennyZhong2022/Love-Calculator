@@ -1,8 +1,8 @@
 import { useNavigate, useParams } from "react-router-dom";
 import "./CalculatorResult.css";
 import Gif from "./Gif";
-import loveSmall from "../pictures/loveSmall.svg";
-import Nav from "./Nav";
+import loveSmall from "../../pictures/loveSmall.svg";
+import Nav from "../NavAndAbout/Nav";
 
 const CalculatorResult = ({ calculateResult }) => {
   const { names } = useParams();
@@ -36,7 +36,7 @@ const CalculatorResult = ({ calculateResult }) => {
           </div>
           <p className="resultMessage">Message: {calculateResult.result}</p>
           <div className="btnContainer">
-            <button className="btn" onClick={goBackToCalculator}>
+            <button className="btnResult" onClick={goBackToCalculator}>
               Make another calculation
             </button>
           </div>
