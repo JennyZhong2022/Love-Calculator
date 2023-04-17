@@ -3,13 +3,7 @@ import LoveCalculator from "./LoveCalculator";
 import Nav from "../NavAndAbout/Nav";
 import loveImage from "../../pictures/love2.jpeg";
 
-const LoveCalculatorContent = ({
-  setCalculateResult,
-  yourName,
-  setYourName,
-  crushName,
-  setCrushName,
-}) => {
+const LoveCalculatorContent = ({ setCalculateResult }) => {
   return (
     <>
       <Nav />
@@ -42,13 +36,7 @@ const LoveCalculatorContent = ({
           </p>
         </div>
 
-        <LoveCalculator
-          setCalculateResult={setCalculateResult}
-          yourName={yourName}
-          setYourName={setYourName}
-          crushName={crushName}
-          setCrushName={setCrushName}
-        />
+        <LoveCalculator setCalculateResult={setCalculateResult} />
       </div>
     </>
   );

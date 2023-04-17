@@ -15,7 +15,7 @@ const LoveCalculator = ({ setCalculateResult }) => {
 
   const navigate = useNavigate();
 
-  const calculatorHandler = (e) => {
+  const handleCalculator = (e) => {
     e.preventDefault();
 
     if (yourName.length === 0) {
@@ -64,7 +64,7 @@ const LoveCalculator = ({ setCalculateResult }) => {
 
   return (
     <>
-      <form onSubmit={calculatorHandler}>
+      <form onSubmit={handleCalculator}>
         <div className="inputContainer">
           <div>
             <TextField

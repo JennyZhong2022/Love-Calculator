@@ -4,13 +4,15 @@ import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import About from "./Components/NavAndAbout/About";
 import HoroscopeMatch from "./Components/HoroscopeMatch/HoroscopeMatch";
 import HoroscopeMatchResult from "./Components/HoroscopeMatch/HoroscopeMatchResult";
+
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [calculateResult, setCalculateResult] = useState();
   const [HoroscopeResult, setHoroscopeResult] = useState("");
+  const [calculateResult, setCalculateResult] = useState();
+
   return (
     <BrowserRouter>
       <Routes>

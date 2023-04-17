@@ -33,7 +33,7 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
 
   const navigate = useNavigate();
 
-  const MatchHandler = (e) => {
+  const handleMatch = (e) => {
     e.preventDefault();
 
     if (year1.length === 0) {
@@ -166,7 +166,7 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
         </div>
 
         <div className="horoscopeMatchContainer">
-          <form onSubmit={MatchHandler}>
+          <form onSubmit={handleMatch}>
             <div className="inputContainerH">
               <div className="input1H">
                 <h4>Person 1 Birth</h4>
