@@ -66,13 +66,14 @@ const LoveCalculator = ({ setCalculateResult }) => {
     <>
       <form onSubmit={calculatorHandler}>
         <div className="inputContainer">
-          <div className="input1">
+          <div>
             <TextField
               id="outlined-basic"
               label="Your Full Name"
               variant="outlined"
               value={yourName}
               onChange={inputNameHandler1}
+              data-testid="yourFullNameInput"
             />
             {showHint1 && yourName.length === 0 && (
               <p className="fillTextHint1">
@@ -81,13 +82,14 @@ const LoveCalculator = ({ setCalculateResult }) => {
               </p>
             )}
           </div>
-          <div className="input2">
+          <div>
             <TextField
               id="outlined-basic"
               label="Crush Full Name"
               variant="outlined"
               value={crushName}
               onChange={inputNameHandler2}
+              data-testid="crushFullNameInput"
             />
             {showHint2 && crushName.length === 0 && (
               <p className="fillTextHint2">

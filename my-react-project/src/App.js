@@ -1,6 +1,6 @@
 import LoveCalculatorContent from "./Components/LoveCalculator/LoveCalculatorContent";
 import CalculatorResult from "./Components/LoveCalculator/CalculatorResult";
-import ErrorPage from "./Components/ErrorPage";
+import ErrorPage from "./Components/ErrorPage/ErrorPage";
 import About from "./Components/NavAndAbout/About";
 import HoroscopeMatch from "./Components/HoroscopeMatch/HoroscopeMatch";
 import HoroscopeMatchResult from "./Components/HoroscopeMatch/HoroscopeMatchResult";

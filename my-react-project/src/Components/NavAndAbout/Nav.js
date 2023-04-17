@@ -25,9 +25,7 @@ const Nav = () => {
             >
               {"Horoscope Match"}
             </Link>
-            {/* <NavLink to="/horoscope-match">
-              <span className="menuText">Horoscope Match</span>
-            </NavLink> */}
+
             <Link
               href="/about-love-calculator"
               underline="hover"
@@ -35,9 +33,6 @@ const Nav = () => {
             >
               {"About Love Calculator"}
             </Link>
-            {/* <NavLink to="/about-love-calculator">
-              <span className="menuText">About Love Calculator</span>
-            </NavLink> */}
           </nav>
         </div>
       </div>

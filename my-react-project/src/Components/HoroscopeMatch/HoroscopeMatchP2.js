@@ -3,6 +3,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
+import exclamation from "../../pictures/exclamation-mark2.png";
 
 const HoroscopeMatchP2 = (props) => {
   const {
@@ -15,6 +16,10 @@ const HoroscopeMatchP2 = (props) => {
     hour2,
     setHour2,
     setMonthNumber2,
+    showHint5,
+    showHint6,
+    showHint7,
+    showHint8,
   } = props;
 
   const currentYear = new Date().getFullYear();
@@ -75,42 +80,67 @@ const HoroscopeMatchP2 = (props) => {
           ))}
         </Select>
       </FormControl>
-      {/*----- month input -----*/}
+      {showHint5 && (
+        <p className="fillTextHintYear">
+          {" "}
+          <img src={`${exclamation}`} alt="!" /> Please fill in this field
+        </p>
+      )}
 
-      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
-        <InputLabel id="demo-simple-select-label">Month</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={month2}
-          label="Date"
-          onChange={inputMonthHandler2}
-        >
-          {monthArray.map((month) => (
-            <MenuItem key={month} value={month}>
-              {month}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+      <div className="inputMonthAndDay">
+        {/*----- month input -----*/}
+        <div>
+          {" "}
+          <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
+            <InputLabel id="demo-simple-select-label">Month</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={month2}
+              label="Date"
+              onChange={inputMonthHandler2}
+            >
+              {monthArray.map((month) => (
+                <MenuItem key={month} value={month}>
+                  {month}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          {showHint6 && (
+            <p className="fillTextHintMonthAndDay">
+              {" "}
+              <img src={`${exclamation}`} alt="!" /> Please fill in this field
+            </p>
+          )}
+        </div>
 
-      {/*----- day input -----*/}
-      <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
-        <InputLabel id="demo-simple-select-label">Day</InputLabel>
-        <Select
-          labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={day2}
-          label="Date"
-          onChange={inputDayHandler2}
-        >
-          {dayArray.map((day) => (
-            <MenuItem key={day} value={day}>
-              {day}
-            </MenuItem>
-          ))}
-        </Select>
-      </FormControl>
+        {/*----- day input -----*/}
+        <div>
+          <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
+            <InputLabel id="demo-simple-select-label">Day</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={day2}
+              label="Date"
+              onChange={inputDayHandler2}
+            >
+              {dayArray.map((day) => (
+                <MenuItem key={day} value={day}>
+                  {day}
+                </MenuItem>
+              ))}
+            </Select>
+          </FormControl>
+          {showHint7 && (
+            <p className="fillTextHintMonthAndDay">
+              {" "}
+              <img src={`${exclamation}`} alt="!" /> Please fill in this field
+            </p>
+          )}
+        </div>
+      </div>
 
       {/*----- hour input -----*/}
       <FormControl sx={{ minWidth: 150, marginBottom: 2, marginRight: 2 }}>
@@ -129,6 +159,12 @@ const HoroscopeMatchP2 = (props) => {
           ))}
         </Select>
       </FormControl>
+      {showHint8 && (
+        <p className="fillTextHintHour">
+          {" "}
+          <img src={`${exclamation}`} alt="!" /> Please fill in this field
+        </p>
+      )}
     </>
   );
 };

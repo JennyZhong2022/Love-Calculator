@@ -42,73 +42,69 @@ const HoroscopeMatchResult = ({ HoroscopeResult }) => {
                   sx={{ marginTop: 2 }}
                 >
                   Astrology Compatibility
-                </Typography>
-                <div>
-                  {" "}
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ marginTop: 1 }}
-                  >
-                    <List
-                      sx={{
-                        width: "100%",
-                        maxWidth: 300,
-                        bgcolor: "background.paper",
-                      }}
-                    >
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Attraction:" />
-                        {HoroscopeResult.result.attraction}
-                      </ListItem>
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Emotion::" />
-                        {HoroscopeResult.result.emotion}
-                      </ListItem>
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Mental:" />
-                        {HoroscopeResult.result.mental}
-                      </ListItem>
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Endurability:" />
-                        {HoroscopeResult.result.endurability}
-                      </ListItem>
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="LifePath:" />
-                        {HoroscopeResult.result.lifePath}
-                      </ListItem>
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Children:" />
-                        {HoroscopeResult.result.children}
-                      </ListItem>
-                      <ListItem disablePadding>
-                        <ListItemIcon>
-                          <InsightsSharpIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Overall:" />
-                        {HoroscopeResult.result.overall}
-                      </ListItem>
-                    </List>
-                  </Typography>
-                </div>
+                </Typography>{" "}
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ marginTop: 1 }}
+                ></Typography>
+                <List
+                  sx={{
+                    width: "100%",
+                    maxWidth: 300,
+                    bgcolor: "background.paper",
+                  }}
+                >
+                  <ListItem disablePadding>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Attraction:" />
+                    {HoroscopeResult.result.attraction}
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Emotion::" />
+                    {HoroscopeResult.result.emotion}
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Mental:" />
+                    {HoroscopeResult.result.mental}
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Endurability:" />
+                    {HoroscopeResult.result.endurability}
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="LifePath:" />
+                    {HoroscopeResult.result.lifePath}
+                  </ListItem>
+                  <ListItem disablePadding>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Children:" />
+                    {HoroscopeResult.result.children}
+                  </ListItem>
+                  <ListItem disablePadding sx={{ fontWeight: 900 }}>
+                    <ListItemIcon>
+                      <InsightsSharpIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Overall:" />
+                    {HoroscopeResult.result.overall}
+                  </ListItem>
+                </List>
               </CardContent>
             </CardActionArea>
           </Card>

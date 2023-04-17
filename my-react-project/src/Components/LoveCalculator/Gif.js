@@ -46,7 +46,6 @@ const Gif = ({ loveScore }) => {
         .then((data) => {
           setGif(data.data.images.original.url);
           console.log(data);
-          setErrorMessage("");
         })
         .catch((error) => setErrorMessage("Invalid"));
     };

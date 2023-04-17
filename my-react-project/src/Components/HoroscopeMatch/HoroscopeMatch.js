@@ -20,41 +20,105 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
   const [hour2, setHour2] = useState("");
   const [monthNumber1, setMonthNumber1] = useState("");
   const [monthNumber2, setMonthNumber2] = useState("");
+
+  const [showHint1, setShowHint1] = useState(false);
+  const [showHint2, setShowHint2] = useState(false);
+  const [showHint3, setShowHint3] = useState(false);
+  const [showHint4, setShowHint4] = useState(false);
+
+  const [showHint5, setShowHint5] = useState(false);
+  const [showHint6, setShowHint6] = useState(false);
+  const [showHint7, setShowHint7] = useState(false);
+  const [showHint8, setShowHint8] = useState(false);
+
   const navigate = useNavigate();
 
   const MatchHandler = (e) => {
     e.preventDefault();
 
-    const options = {
-      method: "GET",
-      headers: {
-        "X-RapidAPI-Key": APIKey,
-        "X-RapidAPI-Host": "astro-matcher-api.p.rapidapi.com",
-      },
-    };
+    if (year1.length === 0) {
+      setShowHint1(true);
+    } else {
+      setShowHint1(false);
+    }
 
-    fetch(
-      `https://astro-matcher-api.p.rapidapi.com/match2?a=%7B%20%22year%22%3A%20${year1}%2C%20%22month%22%3A%201%2C%20%22day%22%3A%20${day1}%2C%20%22hour%22%3A%20${hour1}%2C%20%22minute%22%3A%20${monthNumber1}%2C%20%22second%22%3A%200%2C%20%20%20%22latitude%22%3A%20-37.8142176%2C%20%20%20%20%20%22longitude%22%3A%20144.9631608%20%7D&b=%7B%20%22year%22%3A%20${year2}%2C%20%22month%22%3A%20${monthNumber2}%2C%20%22day%22%3A%20${day2}%2C%20%22hour%22%3A%20${hour2}%2C%20%22minute%22%3A%200%2C%20%22second%22%3A%200%2C%20%20%20%22latitude%22%3A%20-37.8142176%2C%20%20%22longitude%22%3A%20144.9631608%7D`,
-      options
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setHoroscopeResult(data);
-      })
-      .then(() => {
-        navigate("/horoscope-match/compatibility-result");
-      })
-      .catch((err) => console.error(err));
+    if (month1.length === 0) {
+      setShowHint2(true);
+    } else {
+      setShowHint2(false);
+    }
 
-    console.log(year1);
-    console.log(monthNumber1);
-    console.log(day1);
-    console.log(hour1);
-    console.log(year2);
-    console.log(monthNumber2);
-    console.log(day2);
-    console.log(hour2);
+    if (day1.length === 0) {
+      setShowHint3(true);
+    } else {
+      setShowHint3(false);
+    }
+
+    if (hour1.length === 0) {
+      setShowHint4(true);
+    } else {
+      setShowHint4(false);
+    }
+
+    if (year2.length === 0) {
+      setShowHint5(true);
+    } else {
+      setShowHint5(false);
+    }
+
+    if (month2.length === 0) {
+      setShowHint6(true);
+    } else {
+      setShowHint6(false);
+    }
+
+    if (day2.length === 0) {
+      setShowHint7(true);
+    } else {
+      setShowHint7(false);
+    }
+
+    if (hour2.length === 0) {
+      setShowHint8(true);
+    } else {
+      setShowHint8(false);
+    }
+
+    // console.log(year1.length);
+    // console.log(showHint1);
+
+    if (year1 && month1 && day1 && hour1 && year2 && month2 && day2 && hour2) {
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": APIKey,
+          "X-RapidAPI-Host": "astro-matcher-api.p.rapidapi.com",
+        },
+      };
+
+      fetch(
+        `https://astro-matcher-api.p.rapidapi.com/match2?a=%7B%20%22year%22%3A%20${year1}%2C%20%22month%22%3A%201%2C%20%22day%22%3A%20${day1}%2C%20%22hour%22%3A%20${hour1}%2C%20%22minute%22%3A%20${monthNumber1}%2C%20%22second%22%3A%200%2C%20%20%20%22latitude%22%3A%20-37.8142176%2C%20%20%20%20%20%22longitude%22%3A%20144.9631608%20%7D&b=%7B%20%22year%22%3A%20${year2}%2C%20%22month%22%3A%20${monthNumber2}%2C%20%22day%22%3A%20${day2}%2C%20%22hour%22%3A%20${hour2}%2C%20%22minute%22%3A%200%2C%20%22second%22%3A%200%2C%20%20%20%22latitude%22%3A%20-37.8142176%2C%20%20%22longitude%22%3A%20144.9631608%7D`,
+        options
+      )
+        .then((response) => response.json())
+        .then((data) => {
+          // console.log(data);
+          setHoroscopeResult(data);
+        })
+        .then(() => {
+          navigate("/horoscope-match/compatibility-result");
+        })
+        .catch((err) => console.error(err));
+
+      // console.log(year1);
+      // console.log(monthNumber1);
+      // console.log(day1);
+      // console.log(hour1);
+      // console.log(year2);
+      // console.log(monthNumber2);
+      // console.log(day2);
+      // console.log(hour2);
+    }
   };
 
   return (
@@ -107,30 +171,42 @@ const HoroscopeMatch = ({ setHoroscopeResult }) => {
               <div className="input1H">
                 <h4>Person 1 Birth</h4>
                 <HoroscopeMatchP1
-                  year1={year1}
-                  setYear1={setYear1}
-                  month1={month1}
-                  setMonth1={setMonth1}
-                  day1={day1}
-                  setDay1={setDay1}
-                  hour1={hour1}
-                  setHour1={setHour1}
-                  setMonthNumber1={setMonthNumber1}
+                  {...{
+                    year1,
+                    setYear1,
+                    month1,
+                    setMonth1,
+                    day1,
+                    setDay1,
+                    hour1,
+                    setHour1,
+                    setMonthNumber1,
+                    showHint1,
+                    showHint2,
+                    showHint3,
+                    showHint4,
+                  }}
                 />
               </div>
 
               <div className="input2H">
                 <h4>Person 2 Birth </h4>
                 <HoroscopeMatchP2
-                  year2={year2}
-                  setYear2={setYear2}
-                  month2={month2}
-                  setMonth2={setMonth2}
-                  day2={day2}
-                  setDay2={setDay2}
-                  hour2={hour2}
-                  setHour2={setHour2}
-                  setMonthNumber2={setMonthNumber2}
+                  {...{
+                    year2,
+                    setYear2,
+                    month2,
+                    setMonth2,
+                    day2,
+                    setDay2,
+                    hour2,
+                    setHour2,
+                    setMonthNumber2,
+                    showHint5,
+                    showHint6,
+                    showHint7,
+                    showHint8,
+                  }}
                 />
               </div>
             </div>

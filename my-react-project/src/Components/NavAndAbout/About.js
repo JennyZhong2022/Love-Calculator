@@ -21,7 +21,7 @@ const About = () => {
         <h3>Love Calculator: How It Works</h3>
         <p>
           Our{" "}
-          <Link to="/">
+          <Link to="/" data-testid="love-calculator-link">
             <span className="calculateLink">Love Calculator</span>
           </Link>{" "}
           uses a simple, yet effective algorithm to determine your compatibility
@@ -34,7 +34,7 @@ const About = () => {
         <h3>Horoscope Match: How It Works</h3>
         <p>
           Our{" "}
-          <Link to="/horoscope-match">
+          <Link to="/horoscope-match" data-testid="horoscope-calculator-link">
             <span className="calculateLink">Horoscope Match</span>
           </Link>{" "}
           feature uses astrological compatibility to help you find the perfect
