@@ -23,7 +23,7 @@ const Nav = () => {
               underline="hover"
               color="rgb(239, 109, 166)"
             >
-              {"Horoscope Match"}
+              {"Horoscope Calculator"}
             </Link>
 
             <Link

@@ -10,30 +10,49 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 
 function App() {
-  const [HoroscopeResult, setHoroscopeResult] = useState("");
-  const [calculateResult, setCalculateResult] = useState();
+  const [year1, setYear1] = useState("");
+  const [month1, setMonth1] = useState("");
+  const [day1, setDay1] = useState("");
+  const [hour1, setHour1] = useState("");
+
+  const [monthNumber1, setMonthNumber1] = useState("");
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route
-          index
-          element={
-            <LoveCalculatorContent setCalculateResult={setCalculateResult} />
-          }
-        ></Route>
+        <Route index element={<LoveCalculatorContent />}></Route>
         <Route
           path="/love-calculate-result/:names"
-          element={<CalculatorResult calculateResult={calculateResult} />}
+          element={<CalculatorResult />}
         ></Route>
         <Route path="/about-love-calculator" element={<About />}></Route>
         <Route
           path="/horoscope-match"
-          element={<HoroscopeMatch setHoroscopeResult={setHoroscopeResult} />}
+          element={
+            <HoroscopeMatch
+              setMonthNumber1={setMonthNumber1}
+              year1={year1}
+              setYear1={setYear1}
+              month1={month1}
+              day1={day1}
+              hour1={hour1}
+              setMonth1={setMonth1}
+              setHour1={setHour1}
+              setDay1={setDay1}
+              monthNumber1={monthNumber1}
+            />
+          }
         ></Route>
         <Route
-          path="/horoscope-match/compatibility-result"
-          element={<HoroscopeMatchResult HoroscopeResult={HoroscopeResult} />}
+          path="/horoscope-match/compatibility-result/:birth"
+          element={
+            <HoroscopeMatchResult
+              monthNumber1={monthNumber1}
+              year1={year1}
+              day1={day1}
+              hour1={hour1}
+            />
+          }
         ></Route>
         <Route path="*" element={<ErrorPage />}></Route>
       </Routes>

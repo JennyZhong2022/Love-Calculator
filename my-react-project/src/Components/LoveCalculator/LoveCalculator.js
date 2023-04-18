@@ -5,9 +5,7 @@ import Button from "@mui/material/Button";
 import exclamation from "../../pictures/exclamation-mark2.png";
 import TextField from "@mui/material/TextField";
 
-const APIKey = process.env.REACT_APP_LOVE_API_KEY;
-
-const LoveCalculator = ({ setCalculateResult }) => {
+const LoveCalculator = () => {
   const [yourName, setYourName] = useState("");
   const [crushName, setCrushName] = useState("");
   const [showHint1, setShowHint1] = useState(false);
@@ -31,26 +29,7 @@ const LoveCalculator = ({ setCalculateResult }) => {
     }
 
     if (yourName.length > 0 && crushName.length > 0) {
-      const options = {
-        method: "GET",
-        headers: {
-          "X-RapidAPI-Key": APIKey,
-          "X-RapidAPI-Host": "love-calculator.p.rapidapi.com",
-        },
-      };
-
-      fetch(
-        `https://love-calculator.p.rapidapi.com/getPercentage?sname=${yourName}&fname=${crushName}`,
-        options
-      )
-        .then((response) => response.json())
-        .then((data) => {
-          setCalculateResult(data);
-        })
-        .then(() => {
-          navigate(`/love-calculate-result/${yourName}&${crushName}`);
-        })
-        .catch((err) => console.error(err));
+      navigate(`/love-calculate-result/${yourName}&${crushName}`);
     }
   };
 

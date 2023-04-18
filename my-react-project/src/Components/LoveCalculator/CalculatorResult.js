@@ -1,14 +1,39 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./CalculatorResult.css";
 import Gif from "./Gif";
 import loveSmall from "../../pictures/loveSmall.svg";
 import Nav from "../NavAndAbout/Nav";
 import Button from "@mui/material/Button";
 
-const CalculatorResult = ({ calculateResult }) => {
+const APIKey = process.env.REACT_APP_LOVE_API_KEY;
+
+const CalculatorResult = () => {
   const { names } = useParams();
   const [yourNameParam, crushNameParam] = names.split("&");
   const navigate = useNavigate();
+
+  const [calculateResult, setCalculateResult] = useState();
+
+  useEffect(() => {
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": APIKey,
+        "X-RapidAPI-Host": "love-calculator.p.rapidapi.com",
+      },
+    };
+
+    fetch(
+      `https://love-calculator.p.rapidapi.com/getPercentage?sname=${yourNameParam}&fname=${crushNameParam}`,
+      options
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setCalculateResult(data);
+      })
+      .catch((err) => console.error(err));
+  }, [yourNameParam, crushNameParam]);
 
   const goBackToCalculator = () => {
     navigate("/");
@@ -50,7 +75,7 @@ const CalculatorResult = ({ calculateResult }) => {
           </div>
         </div>
       ) : (
-        <p className="loadingText">Loading...</p>
+        <p style={{ marginLeft: "500px", fontSize: "30px" }}>Loading...</p>
       )}
     </>
   );
