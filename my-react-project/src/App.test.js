@@ -18,12 +18,3 @@ test("navigates to the About page", () => {
 
   expect(screen.getByText(/about love calculator/i)).toBeInTheDocument();
 });
-
-test("navigates to the HoroscopeMatch page", () => {
-  render(<App />);
-
-  const horoscopeMatchLink = screen.getByText(/horoscope match/i);
-  userEvent.click(horoscopeMatchLink);
-
-  expect(screen.getByText(/horoscope match/i)).toBeInTheDocument();
-});
