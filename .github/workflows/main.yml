@@ -8,6 +8,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: my-react-project
     steps:
       - name: Checkout
         uses: actions/checkout@v3
