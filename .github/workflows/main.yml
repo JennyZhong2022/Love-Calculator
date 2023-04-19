@@ -19,6 +19,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Install dependencies
+        run: npm ci
+
       - name: Build React App
         run: REACT_APP_LOVE_API_KEY=${{ secrets.API_KEY1 }} REACT_APP_GIPHY_API_KEY=${{ secrets.API_KEY2 }} REACT_APP_HOROSCOPE_API_KEY=${{ secrets.API_KEY3 }} npm run build
         working-directory: ./Love-Calculator
